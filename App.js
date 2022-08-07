@@ -21,15 +21,19 @@ export default function App() {
   const [state, setState] = useState({
     index: 0,
     showNewQuoteScreen: false,
+    author: "",
+    content: "",
+    zitate: data,
   });
 
-  const addQuote = () => {
+  const addQuote = (author, text) => {
     //Newquote ausblenden
     setState({ showNewQuoteScreen: false, index: index });
   };
 
   // den index auslesen
   const index = state.index;
+  const zitate = state.zitate;
   //alle quputs fetchen
   const quotes = data[index];
   // nächste quot

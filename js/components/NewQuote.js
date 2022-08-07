@@ -16,7 +16,7 @@ const NewQuote = (props) => {
 
   //destructuring
   const { visible, onSave } = props;
-  const { content, author } = props;
+  const { content, author } = state;
 
   return (
     <Modal visible={visible} onRequestClose={onSave} animationType="slide">
@@ -34,7 +34,7 @@ const NewQuote = (props) => {
           underlineColorAndroid={"transparent"}
           onChangeText={(text) => setState({ author: text })}
         />
-        <Button title="Speichern" onPress={props.onSave} />
+        <Button title="Speichern" onPress={() => onSave(content, author)} />
       </View>
     </Modal>
   );
