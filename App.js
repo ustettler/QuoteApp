@@ -59,11 +59,15 @@ export default function App() {
       <View style={styles.nextButton}>
         <Button
           title="< Vohriges Zitat"
-          onPress={() => setState({ index: nextIndexBack })}
+          onPress={() =>
+            setState({ index: nextIndexBack, showNewQuoteScreen: false })
+          }
         />
         <Button
           title="Nächstes Zitat >"
-          onPress={() => setState({ index: nextIndex })}
+          onPress={() =>
+            setState({ index: nextIndex, showNewQuoteScreen: false })
+          }
         />
       </View>
       <StatusBar style="auto" />
